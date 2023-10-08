@@ -1,0 +1,95 @@
+main {
+    min-height: 100vh;
+}
+
+.select-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    width: 20em;
+    min-width: 1.5em;
+    border: 0.05em solid gray;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    outline: none;
+}
+
+.select-container:focus {
+    border-color: hsl(200, 100%, 50%);
+}
+
+.select-value {
+    flex-grow: 1;
+}
+
+
+
+.select-value-button {
+    display: inline-flex;
+    gap: 0.25em;
+    background-color: transparent;
+    margin: 0 0.25em 0.25em 0;
+    cursor: pointer;
+}
+
+.select-clear-btn {
+    background: none;
+    color: gray;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1.25em;
+}
+
+.select-clear-btn:focus,
+.select-clear-btn:hover {
+    color: black;
+}
+
+.select-caret {
+    translate: 0 25%;
+    border: 0.25em solid transparent;
+    border-top-color: gray;
+}
+
+.select-divider {
+    background-color: gray;
+    align-self: stretch;
+    width: 0.05em;
+}
+
+.select-options {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: calc(100% + 0.25em);
+    max-height: 15em;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 100;
+    padding: 0;
+    margin: 0;
+    border: 0.05em solid gray;
+    border-radius: 0.25em;
+    list-style: none;
+    background-color: white;
+}
+
+.select-options.show {
+    display: block;
+}
+
+.select-option {
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+}
+
+.select-option:hover {
+    background-color: gray;
+    color: white;
+}
+
+.select-option.selected {
+    background-color: lightblue;
+}
